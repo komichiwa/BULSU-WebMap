@@ -46,10 +46,10 @@
     display: block;
     border: 1px solid #fafafa;
     float: left;
-    width: 300px;
-    height: 50px;
+    width: 180px;
+    height: 30px;
         font-family:Verdana;
-    font-size: 17px;
+    font-size: 13px;
     background: #fff;
     border: 1px solid #d4d4d4;
     border-radius: 20px;
@@ -78,7 +78,7 @@
     font-style: italic;
     font-weight: 100;
     font-family: Helvetica;
-    font-size: 15px;
+    font-size: 12px;
   }
 
 .leaflet-control-search.search-load .search-cancel {
@@ -194,7 +194,7 @@
 }
 
 .leaflet-control-search .search-tip {
-    width: 340px; /*width ng seach suggestion*/
+    width: 215px; /*width ng seach suggestion*/
     margin: -1px;
     padding: 4px 6px 2px 4px;
     padding-left: 20px;

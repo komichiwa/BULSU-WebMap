@@ -12,7 +12,7 @@ Origin and destination
   display:none;
   right: 30px; 
   top: 10px; 
-  left: 385px;
+  left: 270px;
   margin: 5px;
   height: 40px;
   width: 50px;
@@ -47,15 +47,14 @@ Origin and destination
 .input-container {
   display: none;
   position: absolute;
+  top: -1%;
+  flex-direction: column; /* Vertical alignment */
   z-index: 1000;
   align-items: center;
-  /* display: inline-block; */
-  top: 15px;
-  left: 29px;
-
+  left:9px;
   background-color: rgba(255, 255, 255, 0.9); /* transparent white background */
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* box shadow for container */
 }
 
@@ -65,32 +64,57 @@ Origin and destination
 
 .input-container {
   display: none;
-  top: -1%;
-  flex-direction: column; /* Vertical alignment */
   align-items: center; /* Center input elements horizontally */
   background-color: rgba(255, 255, 255, 0.9);
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-top: 20px; /* Add some spacing between inputs */
+  width: 320px;
+  padding-top: 20px;
+
 }
 
 .input-container input {
   top:80%;
-  width: 300px;
   padding: 10px;
   margin-bottom: 10px; /* Add some spacing between inputs */
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 13px;
+  
 }
 
+
+#origin-input,
+#destination-input {
+  width: 240px; /* Adjust the width as needed */
+}
+
+
+#origin-input {
+  background-image: url("images/icon_origin.svg");
+  background-repeat: no-repeat;
+  background-position: 13px center;
+  background-size: 51px 17px; /* Adjusted size */
+  padding-left: 70px;
+  margin-top: 20px;
+}
+
+
+#destination-input {
+  background-image: url("images/icon_destination.svg");
+  background-repeat: no-repeat;
+  background-position: 13px center;
+  background-size: 51px 17px; /* Adjusted size */
+  padding-left: 70px;
+}
 
 #origin-input::placeholder, #destination-input::placeholder {
   font-style: italic;
   font-weight: 100;
   font-family: Helvetica;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .input-container input {
@@ -98,7 +122,7 @@ Origin and destination
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 13px;
 }
 #suggestions {
   position: absolute;
@@ -190,11 +214,17 @@ Origin and destination
 .close-button {
   position: absolute;
   font-size: 15px;
-  right: 10px;
+  left: 15px;
   background-color: transparent;
   border: none;
   color: #333;
   cursor: pointer;
+  background-image: url(images/icon_back.svg);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: 40px 40px;
+  padding: 10px 20px 0px 0px ;
 }
 
 .close-button:hover {

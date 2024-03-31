@@ -25,8 +25,8 @@
 
 
         #map {
-            width: 1920px;
-            height: 1080px;
+            width: 360px;
+            height: 740px;
         }
     </style>
     <title></title>
@@ -42,7 +42,7 @@
     
         <div id="searchContainer">
             <div class="input-container">
-                <button id="closeSearchBtn" class="close-button">X</button>
+                <button id="closeSearchBtn" class="close-button"></button>
                 <!-- <button id="reverseOriginBtn" class="reverse-button">Reverse</button> -->
                 <input type="text" id="origin-input" placeholder="Enter origin">
                 <div>
@@ -110,7 +110,8 @@
 
 
         var map = L.map('map', {
-            zoomControl: false, maxZoom: 19.2, minZoom: 19.2, center: [14.85817, 120.81407]
+            zoomControl: false, maxZoom: 19.2, minZoom: 18.5, center: [14.85778, 120.81358]
+            
         })
         map.fitBounds([[14.854754646512605, 120.80959009450835], [14.8611831, 120.8186677]]);
         map.setMaxBounds([[14.855729, 120.809070], [14.862346, 120.820724]]);
