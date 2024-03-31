@@ -174,7 +174,7 @@
 
 .leaflet-control-search .search-tooltip {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 6;
     float: left;
     list-style: none;
@@ -194,7 +194,7 @@
 }
 
 .leaflet-control-search .search-tip {
-    width: 375px; /*width ng seach suggestion*/
+    width: 340px; /*width ng seach suggestion*/
     margin: -1px;
     padding: 4px 6px 2px 4px;
     padding-left: 20px;
