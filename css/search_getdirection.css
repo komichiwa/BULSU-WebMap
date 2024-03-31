@@ -24,7 +24,7 @@ Origin and destination
   cursor: pointer;
   font-weight: 500;
   background-color: #a70606;
-  background-image: url(images/get-directions-button.png);
+  background-image: url("images/get-directions-button.png");
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
