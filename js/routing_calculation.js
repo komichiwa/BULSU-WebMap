@@ -57,6 +57,7 @@ document.getElementById('getdirection-button').addEventListener('click', async f
                 }
             }
         };
+        
 
         try {
             var apiUrl = 'https://interline-global-valhalla-navigation-and-routing-engine.p.rapidapi.com/route';

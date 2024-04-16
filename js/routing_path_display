@@ -94,6 +94,7 @@ function displayRoute(data) {
 
 
     map.fitBounds(route.getBounds());
+
 }
 
 // to remove existing layers
