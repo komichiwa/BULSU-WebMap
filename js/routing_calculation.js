@@ -49,8 +49,21 @@ document.getElementById('getdirection-button').addEventListener('click', async f
     if (locations) {
         var requestData = {
             locations: locations,
-            costing: BSX_POIs_JSON.costing,
-            costing_options: BSX_POIs_JSON.costing_options
+            costing: 'pedestrian',
+            costing_options: {
+                pedestrian: {
+                    // Adjust walking speed if necessary
+                    walking_speed: 5.0,
+                    // Maximum turn penalty in seconds
+                    max_turn_penalty: 60.0,
+                    // Maximum walking distance in meters
+                    max_walk_distance: 10000.0,
+                    // Maximum walking time in seconds
+                    max_walk_time: 1800.0,
+                    // Adjust penalization for covered pathways
+                    covered_penalty: 0.5 // Lower penalty for covered pathways
+                }
+            }
         };
 
         try {
