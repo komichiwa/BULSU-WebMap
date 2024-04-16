@@ -24,11 +24,20 @@
     <style>
 
 
+/* TEST */
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #map {
+    height: 100%;
+    width: 100vw;
+}
 
-        #map {
+        /* #map {
             width: 1920px;
             height: 1080px
-        }
+        } */
 
 
     </style>
@@ -57,7 +66,7 @@
                     <ul id="suggestions"></ul>
                 </div>
     
-                <button id="getdirection-button">Get Direction</button>
+                <button id="getdirection-button">&nbsp Get Direction</button>
             </div>
         </div>
     </div>
@@ -555,8 +564,8 @@
             });
 
 
-        L.icon = function (options) {
-            return new L.icon(options);
+        L.Icon = function (options) {
+            return new L.Icon(options);
         }
 
 

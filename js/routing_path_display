@@ -77,24 +77,28 @@ function displayRoute(data) {
     var startPoint = decodedPolyline[0];
     var endPoint = decodedPolyline[decodedPolyline.length - 1];
 
+    console.log("Start Point:", startPoint); // Debug log for start point
+    console.log("End Point:", endPoint);     // Debug log for end point
+
     var startIcon = L.icon({
-        iconUrl: 'images/start.png',
+        iconUrl: './images/icons/Park.png',
         iconSize: [40, 40],
         iconAnchor: [16, 32], 
         popupAnchor: [32, -32] 
     });
 
     var endIcon = L.icon({
-        iconUrl: 'images/end-marker.png',
+        iconUrl: './images/icons/Park.png',
         iconSize: [40, 40], 
         iconAnchor: [16, 32],
-        popupAnchor: [0, -32] 
+        popupAnchor: [32, -32] 
     });
 
     startMarker = L.marker(startPoint, { icon: startIcon }).addTo(map);
     endMarker = L.marker(endPoint, { icon: endIcon }).addTo(map);
 
     map.fitBounds(route.getBounds());
+
 }
 
 // to remove existing layers

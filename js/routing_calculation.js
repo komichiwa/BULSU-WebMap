@@ -49,9 +49,15 @@ document.getElementById('getdirection-button').addEventListener('click', async f
     if (locations) {
         var requestData = {
             locations: locations,
-            costing: BSX_POIs_JSON.costing,
-            costing_options: BSX_POIs_JSON.costing_options
+            costing: 'pedestrian', // Specify the costing type for pedestrian routing
+            costing_options: {
+                pedestrian: {
+                    // Adjust costing options for pedestrian routing, such as favoring sidewalks
+                    sidewalk_factor: 1.0 // Example: prioritize sidewalks
+                }
+            }
         };
+        
 
         try {
             var apiUrl = 'https://interline-global-valhalla-navigation-and-routing-engine.p.rapidapi.com/route';
