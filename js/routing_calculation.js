@@ -49,19 +49,11 @@ document.getElementById('getdirection-button').addEventListener('click', async f
     if (locations) {
         var requestData = {
             locations: locations,
-            costing: 'pedestrian',
+            costing: 'pedestrian', // Specify the costing type for pedestrian routing
             costing_options: {
                 pedestrian: {
-                    // Adjust walking speed if necessary
-                    walking_speed: 5.0,
-                    // Maximum turn penalty in seconds
-                    max_turn_penalty: 60.0,
-                    // Maximum walking distance in meters
-                    max_walk_distance: 10000.0,
-                    // Maximum walking time in seconds
-                    max_walk_time: 1800.0,
-                    // Adjust penalization for covered pathways
-                    covered_penalty: 0.5 // Lower penalty for covered pathways
+                    // Adjust costing options for pedestrian routing, such as favoring sidewalks
+                    sidewalk_factor: 1.0 // Example: prioritize sidewalks
                 }
             }
         };

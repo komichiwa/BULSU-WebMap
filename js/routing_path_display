@@ -78,21 +78,20 @@ function displayRoute(data) {
     var endPoint = decodedPolyline[decodedPolyline.length - 1];
 
     var startIcon = L.icon({
-        iconUrl: 'images/start.png',
-        iconSize: [40, 40],
-        iconAnchor: [16, 32], 
-        popupAnchor: [32, -32] 
+        iconUrl: './images/icons/Marker-start.png', // Provide the path to your custom start marker PNG
+        iconSize: [50, 50], // Adjust the size of the icon if needed
+        // Adjust the anchor point if needed
     });
 
     var endIcon = L.icon({
-        iconUrl: 'images/end-marker.png',
-        iconSize: [40, 40], 
-        iconAnchor: [16, 32],
-        popupAnchor: [0, -32] 
+        iconUrl: './images/icons/Marker-end.png', // Provide the path to your custom end marker PNG
+        iconSize: [50, 50], // Adjust the size of the icon if needed
+         // Adjust the anchor point if needed
     });
 
     startMarker = L.marker(startPoint, { icon: startIcon }).addTo(map);
     endMarker = L.marker(endPoint, { icon: endIcon }).addTo(map);
+
 
     map.fitBounds(route.getBounds());
 }

@@ -23,7 +23,8 @@
     <link rel="stylesheet" href="css/search_getdirection.css"> 
     <style>
 
-/* TEST  */
+
+/* TEST */
 body {
     padding: 0;
     margin: 0;
@@ -32,7 +33,6 @@ html, body, #map {
     height: 100%;
     width: 100vw;
 }
-
 
         /* #map {
             width: 1920px;
@@ -66,7 +66,7 @@ html, body, #map {
                     <ul id="suggestions"></ul>
                 </div>
     
-                <button id="getdirection-button">Get Direction</button>
+                <button id="getdirection-button">&nbsp Get Direction</button>
             </div>
         </div>
     </div>
@@ -122,7 +122,7 @@ html, body, #map {
 
 
         var map = L.map('map', {
-           zoomControl: false, maxZoom: 19.2, minZoom: 19.5, center: [14.85778, 120.81358]
+           zoomControl: false, minZoom: 18.7, center: [14.85783, 120.81360],
             
         })
         map.fitBounds([[14.854754646512605, 120.80959009450835], [14.8611831, 120.8186677]]);
@@ -564,8 +564,8 @@ html, body, #map {
             });
 
 
-        L.icon = function (options) {
-            return new L.icon(options);
+        L.Icon = function (options) {
+            return new L.Icon(options);
         }
 
 
