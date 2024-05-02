@@ -56,7 +56,7 @@ var json_BSX_BLDG_GEOJSON_2 = {
                 { "id": 6.0, "name": "Carpio Hall", "category": "Academic","colleges": "Laboratory Highschool", 
                 "description":"Carpio Hall is a university building that serves as the home of the College of Engineering, Architecture, and Fine Arts. It's named after a former university president and features modern facilities such as labs, classrooms, and studios to support students' learning needs in those fields", 
                 "html_exp": "./images/CARPIO HALL.jpg",
-                "Link":"C:\Users\Public\BulsuXplore_Mapbox\QGIS\QLeaf\images\CARPIO HALL.jpg"},
+                "Link": null},
             "geometry": { "type": "MultiPolygon", "coordinates": [[[[120.813742052835195, 14.857522118931323], [120.813848725984855, 14.857607716918819], [120.813449204848951, 14.858058078498765], [120.813342531699334, 14.857971507987198], [120.813742052835195, 14.857522118931323]]]] }
         },
 
@@ -135,7 +135,7 @@ var json_BSX_BLDG_GEOJSON_2 = {
                 "colleges": "College of Science,College of Arts and Letters,College of Architecture and Fine Arts,Graduate School", 
                 "description":"Federizo Hall is a university building that serves as a multi-purpose facility. It houses classrooms, laboratories, and administrative offices. The building is equipped with state-of-the-art technology and resources to support various academic programs.",
                 "html_exp": "./images/FEDERIZO HALL.jpeg",
-                "Link": "https://app.mappedin.com/map/65e100dc789fb8fd13e8c58e?floor=m_65e385a033f30fa3&fbclid=IwAR3J7KDruMSzv8jzWpDpy-bI0Sjpyl0rCjwuolViaaYpMkaEULN5UMmPKH8"
+                "Link": "https://app.mappedin.com/map/65e47a25789fb8fd13e8c60f"
             }
             , "geometry": { "type": "MultiPolygon", "coordinates": [[[[120.814582013413528, 14.857916579652674], [120.814686925915495, 14.85800284590009], [120.814492073769443, 14.858225181566844], [120.815028109861132, 14.858670510751043], [120.815272653026568, 14.85839415088598], [120.815355977327343, 14.858463740449686], [120.815038461979526, 14.858830975999183], [120.814310067028529, 14.858233489304864], [120.814582013413528, 14.857916579652674]]]] }
         },

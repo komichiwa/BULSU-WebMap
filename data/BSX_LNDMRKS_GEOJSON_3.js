@@ -44,7 +44,7 @@ var json_BSX_LNDMRKS_GEOJSON_3 = {
         {
             "type": "Feature", "properties": {
                 "id": null, "name": "Hostel", "category": "Residential", "colleges": null, "description": " BulSU Hostel is a dormitory inside Bulacan State University, providing affordable rooms with AC, private bathrooms, and study spots. It has extras like a lounge, kitchen, and laundry for convenience.",
-                "html_exp": "./images/HOSTEL.jpg",
+                "html_exp": "./images/HOSTEL.jpeg",
 
             },
             "geometry": { "type": "MultiPolygon", "coordinates": [[[[120.813081848010739, 14.858573055025767], [120.813487514005743, 14.858922420145383], [120.813568205061969, 14.858834811819865], [120.813172487279388, 14.85849826731204], [120.813140431928289, 14.858531387588449], [120.81312606228812, 14.85852284042083], [120.813081848010739, 14.858573055025767]]]] }

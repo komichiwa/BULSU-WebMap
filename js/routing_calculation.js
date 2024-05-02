@@ -49,22 +49,15 @@ document.getElementById('getdirection-button').addEventListener('click', async f
     if (locations) {
         var requestData = {
             locations: locations,
-            costing: 'pedestrian',
+            costing: 'pedestrian', // Specify the costing type for pedestrian routing
             costing_options: {
                 pedestrian: {
-                    // Adjust walking speed if necessary
-                    walking_speed: 5.0,
-                    // Maximum turn penalty in seconds
-                    max_turn_penalty: 60.0,
-                    // Maximum walking distance in meters
-                    max_walk_distance: 10000.0,
-                    // Maximum walking time in seconds
-                    max_walk_time: 1800.0,
-                    // Adjust penalization for covered pathways
-                    covered_penalty: 0.5 // Lower penalty for covered pathways
+                    // Adjust costing options for pedestrian routing, such as favoring sidewalks
+                    sidewalk_factor: 1.0 // Example: prioritize sidewalks
                 }
             }
         };
+        
 
         try {
             var apiUrl = 'https://interline-global-valhalla-navigation-and-routing-engine.p.rapidapi.com/route';
@@ -96,6 +89,22 @@ document.getElementById('origin-input').addEventListener('input', function() {
 
     var filteredPOIs = filterPOIs(inputText);
 
+    // sort
+    filteredPOIs.sort(function(a, b) {
+        // check if name starts with input text
+        var startsWithInputA = a.name.toLowerCase().startsWith(inputText);
+        var startsWithInputB = b.name.toLowerCase().startsWith(inputText);
+
+        // sort alphabetically
+        if ((startsWithInputA && startsWithInputB) || (!startsWithInputA && !startsWithInputB)) {
+            return a.name.localeCompare(b.name);
+        } else if (startsWithInputA) {
+            return -1; // letter a before b
+        } else {
+            return 1; 
+        }
+    });
+
     filteredPOIs.forEach(function(location) {
         var listItem = document.createElement('li');
         listItem.textContent = location.name;
@@ -115,6 +124,22 @@ document.getElementById('destination-input').addEventListener('input', function(
 
     var filteredPOIs = filterPOIs(inputText);
 
+    // sort based on input
+    filteredPOIs.sort(function(a, b) {
+        // check if name starts with input text
+        var startsWithInputA = a.name.toLowerCase().startsWith(inputText);
+        var startsWithInputB = b.name.toLowerCase().startsWith(inputText);
+
+        // sort alphabetically
+        if ((startsWithInputA && startsWithInputB) || (!startsWithInputA && !startsWithInputB)) {
+            return a.name.localeCompare(b.name);
+        } else if (startsWithInputA) {
+            return -1; // a before b
+        } else {
+            return 1; 
+        }
+    });
+
     filteredPOIs.forEach(function(location) {
         var listItem = document.createElement('li');
         listItem.textContent = location.name;
@@ -124,4 +149,14 @@ document.getElementById('destination-input').addEventListener('input', function(
         });
         suggestionsList.appendChild(listItem);
     });
+});
+
+document.addEventListener('click', function(event) {
+    var originInput = document.getElementById('origin-input');
+    var destinationInput = document.getElementById('destination-input');
+    var suggestionsList = document.getElementById('suggestions');
+
+    if (event.target !== originInput && event.target !== destinationInput && event.target.parentNode !== suggestionsList) {
+        suggestionsList.innerHTML = '';
+    }
 });
