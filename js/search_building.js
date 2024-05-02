@@ -366,28 +366,49 @@
       },
   
       _defaultFilterData: function (text, records) {
-        const frecords = {}
-  
-        text = text.replace(new RegExp('[.*+?^${}()|[\]\\]','g'), '')
-        // sanitize remove all special characters
-  
+        const frecords = {};
+    
+        text = text.replace(new RegExp('[.*+?^${}()|[\]\\]','g'), ''); // sanitize remove all special characters
+    
         if (text === '') {
-          return []
+            return [];
         }
-  
-        const init = this.options.initial ? '^' : ''
-        const icase = !this.options.casesensitive ? 'i' : undefined
-  
-        const regSearch = new RegExp(init + text, icase)
-  
+    
+        const init = this.options.initial ? '^' : '';
+        const icase = !this.options.casesensitive ? 'i' : undefined;
+    
+        const regSearch = new RegExp(init + text, icase);
+    
         for (const key in records) {
-          if (regSearch.test(key)) {
-            frecords[key] = records[key]
-          }
+            if (regSearch.test(key)) {
+                frecords[key] = records[key];
+            }
         }
-  
-        return frecords
-      },
+    
+        // Sort the keys alphabetically, prioritizing those that start with the input text
+        const sortedKeys = Object.keys(frecords).sort((a, b) => {
+            const startsWithInputA = a.toLowerCase().startsWith(text.toLowerCase());
+            const startsWithInputB = b.toLowerCase().startsWith(text.toLowerCase());
+    
+            // If both start with input text or neither start with input text, sort alphabetically
+            if ((startsWithInputA && startsWithInputB) || (!startsWithInputA && !startsWithInputB)) {
+                return a.localeCompare(b);
+            } else if (startsWithInputA) {
+                return -1; // Place a before b
+            } else {
+                return 1; // Place b before a
+            }
+        });
+    
+        // Create a new object with sorted keys
+        const sortedRecords = {};
+        sortedKeys.forEach(key => {
+            sortedRecords[key] = frecords[key];
+        });
+    
+        return sortedRecords;
+    },
+    
   
       showTooltip: function (records) {
         this._countertips = 0
@@ -946,13 +967,6 @@ function untoggleButton() {
   directionBtn.style.display = 'none';
 }
 
-// directionBtn.addEventListener('click', function() {
-//   if (searchControl.options.collapsed) {
-//       searchControl.expand();
-//   } else {
-//       searchControl.collapse();
-//   }
-// });
 
 
 

@@ -89,6 +89,22 @@ document.getElementById('origin-input').addEventListener('input', function() {
 
     var filteredPOIs = filterPOIs(inputText);
 
+    // sort
+    filteredPOIs.sort(function(a, b) {
+        // check if name starts with input text
+        var startsWithInputA = a.name.toLowerCase().startsWith(inputText);
+        var startsWithInputB = b.name.toLowerCase().startsWith(inputText);
+
+        // sort alphabetically
+        if ((startsWithInputA && startsWithInputB) || (!startsWithInputA && !startsWithInputB)) {
+            return a.name.localeCompare(b.name);
+        } else if (startsWithInputA) {
+            return -1; // letter a before b
+        } else {
+            return 1; 
+        }
+    });
+
     filteredPOIs.forEach(function(location) {
         var listItem = document.createElement('li');
         listItem.textContent = location.name;
@@ -108,6 +124,22 @@ document.getElementById('destination-input').addEventListener('input', function(
 
     var filteredPOIs = filterPOIs(inputText);
 
+    // sort based on input
+    filteredPOIs.sort(function(a, b) {
+        // check if name starts with input text
+        var startsWithInputA = a.name.toLowerCase().startsWith(inputText);
+        var startsWithInputB = b.name.toLowerCase().startsWith(inputText);
+
+        // sort alphabetically
+        if ((startsWithInputA && startsWithInputB) || (!startsWithInputA && !startsWithInputB)) {
+            return a.name.localeCompare(b.name);
+        } else if (startsWithInputA) {
+            return -1; // a before b
+        } else {
+            return 1; 
+        }
+    });
+
     filteredPOIs.forEach(function(location) {
         var listItem = document.createElement('li');
         listItem.textContent = location.name;
@@ -117,4 +149,14 @@ document.getElementById('destination-input').addEventListener('input', function(
         });
         suggestionsList.appendChild(listItem);
     });
+});
+
+document.addEventListener('click', function(event) {
+    var originInput = document.getElementById('origin-input');
+    var destinationInput = document.getElementById('destination-input');
+    var suggestionsList = document.getElementById('suggestions');
+
+    if (event.target !== originInput && event.target !== destinationInput && event.target.parentNode !== suggestionsList) {
+        suggestionsList.innerHTML = '';
+    }
 });
