@@ -8,7 +8,7 @@ var json_BSX_LNDMRKS_GEOJSON_3 = {
             {
                 "id": 10.0, "name": "Bulsu E-Library", "category": "Library", "colleges": null,
                 "description": "BulSU's E-Library, a modernized learning resource, grants access to diverse digital resources, catering to academic and research requirements. It facilitates convenient information access and exchange, fostering innovation and knowledge-sharing at the university.",
-                "html_exp": "./images/eLIBRARY.jpg",
+                "html_exp": "./images/ELIBRARY.jpg",
             },
             "geometry": { "type": "MultiPolygon", "coordinates": [[[[120.813321901514854, 14.858526560021595], [120.813638497575084, 14.858192059497977], [120.813864481659508, 14.858392548833011], [120.813761860867558, 14.858503345490943], [120.813825180079618, 14.858562437018604], [120.813617755074617, 14.858785085307924], [120.813321901514854, 14.858526560021595]]]] }
         },
