@@ -538,6 +538,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	font-weight:bold;
 	font-style: italic;
 	text-align: center;
+	display: none;
 	background-color:#B8221C ;
 	border-radius: 18px 18px 18px 18px ;
 	border-width: 0;
