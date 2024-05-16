@@ -49,7 +49,7 @@
     width: 230px;
     height: 30px;
         font-family:Verdana;
-    font-size: 15px;
+    font-size: 11px;
     background: #fff;
     border: 1px solid #d4d4d4;
     border-radius: 20px;
@@ -202,7 +202,7 @@
     display: block;
     color: #000;
     font: arial;
-    font-size: 15px;
+    font-size: 11px;
     background: #ffffff;
     border-radius: .25em;
     text-decoration: none;

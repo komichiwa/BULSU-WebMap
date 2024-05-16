@@ -86,7 +86,7 @@ var json_BSX_BLDG_GEOJSON_2 = {
         {
             "type": "Feature", "properties":
             {
-                "id": 11.0, "name": "Science and Research Center", "category": "Research",
+                "id": 11.0, "name": "Science and Research Learning Center", "category": "Research",
                 "colleges": null, 
                 "description":null,
                 "html_exp": "./images/SRLC.jpg",
@@ -153,7 +153,7 @@ var json_BSX_BLDG_GEOJSON_2 = {
         {
             "type": "Feature", "properties":
             {
-                "id": 18.0, "name": "Mendoza Hall", "category": "Academic","colleges": "College of Social Science and Philosophy", 
+                "id": 18.0, "name": "Mendoza Hall", "category": "Academic","colleges": "College of Social Science and Philosophy (CSSP)", 
                 "description":"Mendoza Hall is a university building that houses classrooms, laboratories, and administrative offices. It serves as a hub for academic programs and student services, providing resources and facilities to support teaching, research, and learning. The building features modern facilities and equipment, as well as state-of-the-art technology to support the needs of students, faculty, and staff.",
                 "html_exp": "./images/CSSP.jpg",
                 "Link":"https://app.mappedin.com/map/65e2eb9ba1cbc80d8a98ebdc"

@@ -65,10 +65,10 @@ function displayRoute(data) {
     // Add effects to routelines
     antPath = L.polyline.antPath(decodedPolyline, {
         delay: 1200, 
-        dashArray: [10, 70], 
+        dashArray: [50, 70], 
         weight: 5, 
         color: '#6AC6C6', 
-        pulseColor: '#83B4BF' 
+        pulseColor: '#FEF8F8' 
     }).addTo(map);
   
     map.fitBounds(route.getBounds());
@@ -78,15 +78,15 @@ function displayRoute(data) {
     var endPoint = decodedPolyline[decodedPolyline.length - 1];
 
     var startIcon = L.icon({
-        iconUrl: './images/icons/Marker-start.png', 
-        iconSize: [50, 50], 
-
+        iconUrl: './images/icons/Marker-start.png',
+        iconSize: [50, 50],
+        iconAnchor: [25, 50], // Half of the icon width horizontally, and the full height vertically
     });
-
+    
     var endIcon = L.icon({
-        iconUrl: './images/icons/Marker-end.png', 
-        iconSize: [50, 50], 
-  
+        iconUrl: './images/icons/Marker-end.png',
+        iconSize: [50, 50],
+        iconAnchor: [25, 50], // Half of the icon width horizontally, and the full height vertically
     });
 
     startMarker = L.marker(startPoint, { icon: startIcon }).addTo(map);

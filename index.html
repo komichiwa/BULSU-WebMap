@@ -25,21 +25,10 @@
     <link rel="stylesheet" href="css/qgis2web.css">
     <link rel="stylesheet" href="css/search_getdirection.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-0SwwdF3qyFwZvyjftw4QGKs/fI6TIgzVUzE8+Q8N5waVCAHVyl7e5Tp5jzgwzT50" crossorigin="anonymous">
-
-    
-    
-
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <!-- //for building location search bar -->
     <link rel="stylesheet" href="css/search_building.css">
-    <!-- for get direction search bar -->
     <link rel="stylesheet" href="css/search_getdirection.css"> 
 
- 
-    
-    
-    
-    
     <style>
 
 
@@ -201,7 +190,7 @@ html, body,
 
    
 
-       
+        map.setMaxBounds([[14.855729, 120.809070], [14.862346, 120.820724]]);
 
         //map.setMaxBounds([[14.855729, 120.809070], [14.862346, 120.820724]]);
 
@@ -655,8 +644,8 @@ html, body,
         bounds_group.addLayer(layer_BSX_GATES_GEOJSON_4);
         map.addLayer(layer_BSX_GATES_GEOJSON_4);
 
-        L.icon = function (options) {
-            return new L.icon(options);
+        L.Icon = function (options) {
+            return new L.Icon(options);
         }
 
        

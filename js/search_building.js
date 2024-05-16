@@ -952,10 +952,10 @@
 
 
   // new functions
-  var customIcon = L.icon({
+var customIcon = L.icon({
     iconUrl: 'images/location_marker.png',
     iconSize: [45, 60], // Size of the icon
-    iconAnchor: [50, 50], // Point of the icon which will correspond to marker's location
+    iconAnchor: [22, 60], // Adjusted anchor point
     popupAnchor: [0, -16] // Point from which the popup should open relative to the iconAnchor
 });
 
